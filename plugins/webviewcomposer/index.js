@@ -9,7 +9,7 @@ module.exports = (app, config) => {
       'token': req.body.token,
     };
 
-    const postURL = `${config.webViewComposerUrl}/render`;
+    const postURL = `${config.apiUrl}/render`;
     console.log(`Sending POST to ${postURL} with body`, body);
 
     request({
@@ -34,7 +34,7 @@ module.exports = (app, config) => {
     const body = {
       id: riderId,
     };
-    const deleteURL = `${config.webViewComposerUrl}/render`;
+    const deleteURL = `${config.apiUrl}/render`;
     console.log(`Stopping rider: ${deleteURL}`);
     request({
       method: 'DELETE',
